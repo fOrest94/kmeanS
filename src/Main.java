@@ -213,10 +213,10 @@ public class Main
 	public static void main(String[] args) 
 	{
 		ShowArrayValues();
-		Operation_1();System.out.println(k1.toString());
-		Operation_2();System.out.println(k1.toString());
-		Operation_3();System.out.println(k1.toString());
-		Operation_4();System.out.println(k1.toString());
+		Operation_1();
+		Operation_2();
+		Operation_3();
+		Operation_4();
 		System.out.println("\nResults: ");
 		System.out.println(k1.toString());
 		System.out.println(k2.toString());
