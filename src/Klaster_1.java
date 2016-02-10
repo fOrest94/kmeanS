@@ -6,16 +6,6 @@ public class Klaster_1
 	private ArrayList<Integer> id = new ArrayList<Integer>();
 	private int id_I;
 	
-	public Klaster_1()
-	{
-		
-	}
-	public Klaster_1(double[][] polozenie, ArrayList<Integer> id) 
-	{
-		this.polozenie = polozenie;
-		this.id = id;
-	}
-
 	public int getId_I() 
 	{
 		return id_I;
@@ -54,11 +44,6 @@ public class Klaster_1
 	
 	public String toString()
 	{
-		String p1 = "Klaster 1 to punkty: "+
-		id.toString()+
-		" Mean Vector (centroid): ("+polozenie[0][0]+", "+polozenie[0][1]+")";
-		return p1;
-			
-		
+		return "Klaster 1 to punkty: "+id.toString()+" Mean Vector (centroid): ("+polozenie[0][0]+", "+polozenie[0][1]+")";
 	}
 }

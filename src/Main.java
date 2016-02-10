@@ -1,4 +1,3 @@
-
 public class Main 
 {
 	static double[][] array =
@@ -12,6 +11,10 @@ public class Main
 	static Klaster_1 k1 = new Klaster_1();
 	static Klaster_2 k2 = new Klaster_2();
 	static int[] numer = new int[2];
+	
+	/**
+	 * W ponizszej funkcji wybisuje wartosci 7 punktow w uk³adzie kartezjañskim
+	 */
 	
 	public static void ShowArrayValues()
 	{
@@ -34,6 +37,11 @@ public class Main
 			System.out.print("),\n");
 		}
 	}
+	
+	/**
+	 *  W tej funkcji dziele dane na dwa klastry. Wybieram tutaj te, które s¹
+	 *  najbardziej od siebie oddalone
+	 */
 	
 	public static void Operation_1()
 	{
@@ -78,13 +86,17 @@ public class Main
 				}
 			}
 		}
-
 		k1.setPolozenie(cluster1);
 		k1.setId_I(numer[0]);
 		k2.setPolozenie(cluster2);
 		k2.setId_I(numer[1]);
 	}
 	
+	/**
+	 *  W tej funkcji sprawdzam, ktore punkty sa umieszczone najblizej danego z klastrow.
+	 *  Wektor centroidow zmienia sie za kazdym razem w momencie gdy klaster przywlaszcza
+	 *  sobie kolejne punkty
+	 */
 	public static void Operation_2()
 	{
 		int licznik1 = 0;
@@ -124,6 +136,12 @@ public class Main
 		}
 	}
 	
+	/**
+	 * Funkcja ta jest powiazana z funkcja Operation_4. W tej funkcji Po raz koleny sprawdzam 
+	 * czy dla nowego po³o¿enia wektora centroidów, kolejne punkty wci¹¿ nale¿¹ do 
+	 * poszczególnych klastrów
+	 */
+	
 	public static void Operation_3()
 	{
 		for(int i = 0; i < array.length; i++)
@@ -148,6 +166,11 @@ public class Main
 			}
 		}
 	}
+	
+	/*
+	 * W funkcji tej ponownie obliczam wektor centroidów, gdy¿ po zmianach w funkcji 3 jego
+	 * po³o¿enie uleg³o zmianie
+	 */
 	
 	public static void Operation_4()
 	{
@@ -190,10 +213,11 @@ public class Main
 	public static void main(String[] args) 
 	{
 		ShowArrayValues();
-		Operation_1();
-		Operation_2();
-		Operation_3();
-		Operation_4();
+		Operation_1();System.out.println(k1.toString());
+		Operation_2();System.out.println(k1.toString());
+		Operation_3();System.out.println(k1.toString());
+		Operation_4();System.out.println(k1.toString());
+		System.out.println("\nResults: ");
 		System.out.println(k1.toString());
 		System.out.println(k2.toString());
 	}
